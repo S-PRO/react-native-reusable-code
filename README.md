@@ -17,10 +17,9 @@
 
 |method | arguments | description|
 |------ | ---- | -------|
-|launchImageLibrary | { height?: number, width?: number} | calls default phone gallery; `height` and `width` params (if provided) will be set for cropping area; returns `Promise`;|
-|launchCamera | { height?: number, width?: number} | calls default phone camera; `height` and `width` params (if provided) will be set for cropping area; returns `Promise`;|
-|open | { cameraLabel: string, galleryLabel: string, cancelLabel: string, onSelect: (base64: string) => {}, options?: { height?: number, width?: number}
-} | Opens `actionSheet` with 3 buttons (Camera, Gallery, Cancel);|
+|launchImageLibrary | ```{ height?: number, width?: number}``` - optional | calls default phone gallery; `height` and `width` params (if provided) will be set for cropping area; returns `Promise`;|
+|launchCamera | ```{ height?: number, width?: number}``` - optional | calls default phone camera; `height` and `width` params (if provided) will be set for cropping area; returns `Promise`;|
+|open | ```{ cameraLabel: string, galleryLabel: string, cancelLabel: string, onSelect: (base64: string) => {}, options?: { height?: number, width?: number}}``` | Opens `actionSheet` with 3 buttons (Camera, Gallery, Cancel);|
 
 ### How to use:
 
@@ -70,7 +69,7 @@ ImagePicker.open({
 
 |method | arguments | description|
 |------ | ---- | -------|
-|show | listOfButtons: Array<{ label: string, onPress: Function, isCancel?: boolean }> | calls default phone gallery; `height` and `width` params (if provided) will be set for cropping area;|
+|show | ```Array<{ label: string, onPress: Function, isCancel?: boolean }>``` | calls default phone gallery; `height` and `width` params (if provided) will be set for cropping area;|
 
 ### How to use:
 
