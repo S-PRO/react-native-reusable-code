@@ -5,11 +5,11 @@
 
 ### Uses:
 
-* [react-native-permissions](https://github.com/yonahforst/react-native-permissions)
+* [react-native-permissions v "1.1.1"](https://github.com/yonahforst/react-native-permissions)
 
-* [react-native-image-crop-picker](https://github.com/ivpusic/react-native-image-crop-picker)
+* [react-native-image-crop-picker v "0.21.1"](https://github.com/ivpusic/react-native-image-crop-picker)
 
-* [@yfuks/react-native-action-sheet](https://github.com/yfuks/react-native-action-sheet)
+* [@yfuks/react-native-action-sheet v "0.0.5"](https://github.com/yfuks/react-native-action-sheet)
 
 * [actionSheet.js](actionSheet.js)
 
@@ -63,7 +63,7 @@ ImagePicker.open({
 
 ### Uses:
 
-* [@yfuks/react-native-action-sheet](https://github.com/yfuks/react-native-action-sheet)
+* [@yfuks/react-native-action-sheet v "0.0.5"](https://github.com/yfuks/react-native-action-sheet)
 
 ### Methods:
 
