@@ -102,3 +102,82 @@ const options = [
 ];
 ActionSheet.show(options);
 ```
+
+
+
+## audio.js:
+
+### Uses:
+
+* [react-native-audio-recorder-player v "2.0.8"](https://github.com/dooboolab/react-native-audio-recorder-player)
+* [react-native-audio-toolkit v "2.0.8"](https://github.com/futurice/react-native-audio-toolkit)
+
+### Methods:
+
+|method | arguments | description|
+|------ | ---- | -------|
+|onStartRecord | ```{ callback: (err: string, path: string) => void }``` | starts recording audio to a file, by default record.mp4;|
+|onStopRecord | ```{ callback: (err: string) => void }``` | stop recording audio;|
+|onStartPlay | ```{ path: string }``` | starts play audio from url or local file; return Promise|
+|onPausePlay | ```{ }``` | Pause the player;|
+|onStopPlay | ```{ }``` | Stops the player and removes the listener;|
+
+### How to use:
+
+1. Install [react-native-audio-recorder-player](https://github.com/dooboolab/react-native-audio-recorder-player)
+2. Install [react-native-audio-toolkit](https://github.com/futurice/react-native-audio-toolkit)
+3. Copy `audio.js` to your project;
+3. Import `import AudioRecorder from 'src/audio';`
+4. Call `onStartRecord` method with supported arguments;
+4. Call `onStopRecord` method with supported arguments;
+4. Call `onStartPlay` method with supported arguments;
+4. Call `onPausePlay` method with supported arguments;
+4. Call `onStopPlay` method with supported arguments;
+
+
+### Examples:
+
+1. initial for use AudioRecorder:
+```
+audioRecorder = new AudioRecorder();
+```
+2. `onStartRecord` method:
+
+```
+this.audioRecorder.onStartRecord((err, filename) => {
+  if (err) {
+    console.log(err);
+  }
+
+  this.setState(() => ({ filename }));
+});
+```
+
+3. `onStopRecord` method:
+
+```
+  this.audioRecorder.onStopRecord((err) => {
+    if (err) {
+      console.log("error stop recording", err);
+    }
+  });
+```
+
+4. `onStartPlay` method:
+
+```
+  this.audioRecorder.onStartPlay("https://somelink/record.mp4");
+  this.audioRecorder.onStartPlay("file:///sdcard/record.mp4");
+```
+
+5. `onPausePlay` method:
+
+```
+  this.audioRecorder.onPausePlay();
+```
+
+6. `onStopPlay` method:
+
+```
+  this.audioRecorder.onStopPlay();
+```
