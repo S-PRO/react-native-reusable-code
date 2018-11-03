@@ -181,3 +181,100 @@ this.audioRecorder.onStartRecord((err, filename) => {
 ```
   this.audioRecorder.onStopPlay();
 ```
+
+
+## documentPicker module:
+
+* [documentPicker.js](documentPicker/documentPicker.js)
+* [file.helper.js](documentPicker/file.helper.js)
+* [attachment.config.js](documentPicker/attachment.config.js)
+
+### Uses:
+
+* [react-native-document-picker v "2.1.0"](https://github.com/Elyx0/react-native-document-picker)
+
+* [react-native-doc-viewer v "2.7.8"](https://github.com/philipphecht/react-native-doc-viewer)
+
+* [react-native-mime-types v "2.2.1"](https://github.com/Liroo/react-native-mime-types)
+
+
+### documentPicker.js methods:
+
+|method | arguments | description|
+|------ | ---- | -------|
+|init | none | opens native document picker; returns `Promise` with file|
+|openFile | ```{ uri: string, fileName: string, type: string }``` | opens document viewer; for iOS: only `uri` required; for Android: `uri`, `fileName`, `type` fields required; returns `void`;|
+
+### file.helper.js methods:
+
+|method | arguments | description|
+|------ | ---- | -------|
+|checkType | `type: string` | checks if provided `type` is in list of possible extensions (listed in [attachment.config.js](documentPicker/attachment.config.js)); returns `boolean`;|
+|getType | `name: string` | return mime type for provided `name`; [react-native-mime-types v "2.2.1"](https://github.com/Liroo/react-native-mime-types); returns `string`;|
+|getFileName | `url: string` | return filename for provided `url`; returns `string`; |
+
+### How to use `documentPicker.js`:
+
+1. Install [react-native-document-picker](https://github.com/Elyx0/react-native-document-picker), [react-native-doc-viewer](https://github.com/philipphecht/react-native-doc-viewer) and [react-native-mime-types](https://github.com/Liroo/react-native-mime-types)
+2. Copy `documentPicker` folder to your project;
+3. Import `DocumentPicker from 'src/documentPicker/documentPicker'`;
+4. Call one of supported methods;
+
+### Examples:
+
+1. `init` method:
+
+```
+DocumentPicker
+.init()
+.then((res: {
+  type: string,
+  fileName: string,
+  uri: string,
+  data?: {},
+  fileSize: number
+}) => {})
+```
+
+2. `openFile` method:
+
+```
+DocumentPicker
+.openFile({
+  uri,
+  fileName,
+  type
+})
+```
+
+
+### How to use `file.helper.js`:
+
+1. Install [react-native-mime-types](https://github.com/Liroo/react-native-mime-types)
+2. Copy `documentPicker` folder to your project;
+3. Import `* as FileHelper from 'src/documentPicker/file.helper'`;
+4. Call one of supported methods;
+
+### Examples:
+
+1. `checkType` method:
+
+```
+FileHelper
+.checkType("image/jpeg"); // boolean here
+```
+
+2. `getType` method:
+
+```
+FileHelper
+.getType("image.jpeg"); // `image/jpeg` here
+```
+
+2. `getFileName` method:
+
+```
+FileHelper
+.getFileName("file:///folder1/folder2/image.jpeg"); // `image/jpeg` here
+```
+
