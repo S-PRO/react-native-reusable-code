@@ -2,16 +2,16 @@
 
 ## MAP:
 
-1. [imagePicker.js](#imagePicker.js)
+1. [imagePicker](#imagePicker)
 
-2. [actionSheet.js](#actionSheet.js)
+2. [actionSheet](#actionSheet)
 
-3. [audio.js](#audio.js)
+3. [audio](#audio)
 
 4. [documentPicker module](#documentPicker-module)
 
 
-## imagePicker.js:
+## imagePicker:
 
 ### Uses:
 
@@ -69,7 +69,7 @@ ImagePicker.open({
 ```
 
 
-## actionSheet.js:
+## actionSheet:
 
 ### Uses:
 
@@ -115,7 +115,7 @@ ActionSheet.show(options);
 
 
 
-## audio.js:
+## audio:
 
 ### Uses:
 
