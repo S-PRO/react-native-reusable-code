@@ -202,15 +202,15 @@ this.audioRecorder.onStartRecord((err, filename) => {
 
 |method | arguments | description|
 |------ | ---- | -------|
-|init | none | opens native document picker; returns `Promise` with file|
-|openFile | ```{ uri: string, fileName: string, type: string }``` | opens document viewer; for iOS: only `uri` required; for Android: `uri`, `fileName`, `type` fields required; returns `void`;|
+|init | none | opens native document picker; returns `Promise` with file; uses [react-native-document-picker v "2.1.0"](https://github.com/Elyx0/react-native-document-picker);|
+|openFile | ```{ uri: string, fileName: string, type: string }``` | opens document viewer; for iOS: only `uri` required; for Android: `uri`, `fileName`, `type` fields required; returns `void`; uses [react-native-doc-viewer v "2.7.8"](https://github.com/philipphecht/react-native-doc-viewer);|
 
 ### file.helper.js methods:
 
 |method | arguments | description|
 |------ | ---- | -------|
 |checkType | `type: string` | checks if provided `type` is in list of possible extensions (listed in [attachment.config.js](documentPicker/attachment.config.js)); returns `boolean`;|
-|getType | `name: string` | return mime type for provided `name`; [react-native-mime-types v "2.2.1"](https://github.com/Liroo/react-native-mime-types); returns `string`;|
+|getType | `name: string` | return mime type for provided `name`; returns `string`; uses [react-native-mime-types v "2.2.1"](https://github.com/Liroo/react-native-mime-types);|
 |getFileName | `url: string` | return filename for provided `url`; returns `string`; |
 
 ### How to use `documentPicker.js`:
