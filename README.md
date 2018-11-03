@@ -285,6 +285,6 @@ FileHelper
 
 ```
 FileHelper
-.getFileName("file:///folder1/folder2/image.jpeg"); // `image/jpeg` here
+.getFileName("file:///folder1/folder2/image.jpeg"); // `image.jpeg` here
 ```
 
