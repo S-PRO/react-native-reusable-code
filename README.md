@@ -1,7 +1,12 @@
 # react-native-reusable-code:
 
+## MAP:
 
-## imagePicker.js:
+1. [imagePicker.js](#imagePicker)
+
+2. [actionSheet.js](#actionSheet)
+
+## <a name="imagePicker"></a>imagePicker.js:
 
 ### Uses:
 
@@ -59,7 +64,7 @@ ImagePicker.open({
 ```
 
 
-## actionSheet.js:
+## <a name="actionSheet"></a>actionSheet.js:
 
 ### Uses:
 
